@@ -2,7 +2,7 @@
 Mini Project Using `C#` & `Entity Framework Core`
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com) &nbsp;
 
 ## Project Description
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
