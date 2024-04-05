@@ -1,6 +1,8 @@
 # Asset Tracking DB
 Mini Project Using `C#` & `Entity Framework Core`
 
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
+
 ## Project Description
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
 - Full `CRUD`
