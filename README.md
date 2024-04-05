@@ -7,8 +7,8 @@ Mini Project Using `C#` & `Entity Framework Core`.
 - Error handling
 - User-friendly interface
 
-### Content
-- View list w/ options 
+### Content of App
+- Choose one option from the six options given below..
 1. View asset list
 2. Add product to list
 3. Update product
