@@ -8,8 +8,6 @@ An Asset Tracking is a `Console App` and it is a way to keep track of the compan
 You can clone this repo to modify and make changes of your own. Please give me proper credit by linking back to [Shailja26code](https://github.com/Shailja26code/AssetTrackingDB). Thanks!
 
 ### Built With: <br/>
-
-
 This project was built using these technologies.
 
 - `C#`
