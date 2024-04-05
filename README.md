@@ -15,7 +15,7 @@ This project was built using these technologies.
 - `SSMS`
 - `Entity Framework Core`
 
-### Project Description
+#### Project Description
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
 - Full `CRUD`
 - Error handling
