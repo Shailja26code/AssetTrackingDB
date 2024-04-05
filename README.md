@@ -1,5 +1,5 @@
 # Asset Tracking DB
-An Asset Tracking is a way to keep track of the company assets, like Laptops, Stationary computers, phones and so on.
+An Asset Tracking is a 'Console App' and it is a way to keep track of the company assets, like Laptops, Stationary computers, phones and so on.
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com) &nbsp;
