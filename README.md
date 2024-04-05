@@ -1,11 +1,14 @@
 # Asset Tracking DB
-Mini Project Using `C#` & `Entity Framework Core`
+An Asset Tracking is a way to keep track of the company assets, like Laptops, Stationary computers, phones and so on.
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com) &nbsp;
 
 ## :love_you_gesture: Thanks to me:
 You can clone this repo to modify and make changes of your own. Please give me proper credit by linking back to [Shailja26code](https://github.com/Shailja26code/AssetTrackingDB). Thanks!
+
+### Built With:
+
 
 ### Project Description
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
