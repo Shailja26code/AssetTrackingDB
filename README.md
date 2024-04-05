@@ -9,6 +9,12 @@ You can clone this repo to modify and make changes of your own. Please give me p
 
 ### Built With:
 
+This project was built using these technologies.
+
+- `C#`
+- `.Net`
+- 'SSMS`
+- `Entity Framework Core`
 
 ### Project Description
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
