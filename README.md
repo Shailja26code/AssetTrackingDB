@@ -1,5 +1,5 @@
 # Asset Tracking DB
-Mini Project Using <img alt="C#" src="https://user-images.githubusercontent.com/25181517/121405384-444d7300-c95d-11eb-959f-913020d3bf90.png"/> & `Entity Framework Core`.
+Mini Project Using <img alt="C#" src="https://user-images.githubusercontent.com/25181517/121405384-444d7300-c95d-11eb-959f-913020d3bf90.png" height="20px"/> & `Entity Framework Core`.
 
 ## Project Description
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
