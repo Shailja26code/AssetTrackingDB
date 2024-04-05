@@ -7,7 +7,7 @@ An Asset Tracking is a `Console App` and it is a way to keep track of the compan
 ## :love_you_gesture: Thanks to me:
 You can clone this repo to modify and make changes of your own. Please give me proper credit by linking back to [Shailja26code](https://github.com/Shailja26code/AssetTrackingDB). Thanks!
 
-### :slightly_smiling_face: Built With: 
+## :slightly_smiling_face: Built With: 
 
 This project was built using these technologies.
 - `C#`
@@ -15,7 +15,7 @@ This project was built using these technologies.
 - `SSMS`
 - `Entity Framework Core`  
 
-#### :ok_hand: Features
+## :ok_hand: Features
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
 - Full `CRUD`
 - Error handling
