@@ -4,13 +4,16 @@ Mini Project Using `C#` & `Entity Framework Core`
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com) &nbsp;
 
-## Project Description
+## :love_you_gesture: Thanks to me:
+
+
+### Project Description
 - An asset tracking console app that helps the user to manage company assets like, laptops, mobile phones and so on...
 - Full `CRUD`
 - Error handling
 - User-friendly interface
 
-### Content of App
+#### Content of App
 - Choose one option from the six options given below..
 1. View asset list
 2. Add product to list
