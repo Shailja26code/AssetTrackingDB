@@ -1,5 +1,5 @@
 # Asset Tracking DB
-Mini project during System developer .NET studies @ Lexicon. Using C#, Entity Framework, LINQ.
+Mini project during  Using `C#`, `Entity Framework Core`.
 
 ## Project Description
 - An asset tracking console app that let's the user manage company assets (laptops and mobile phones)
