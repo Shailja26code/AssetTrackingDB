@@ -12,7 +12,7 @@ This project was built using these technologies.
 
 - `C#`
 - `.Net`
-- 'SSMS`
+- `SSMS`
 - `Entity Framework Core`
 
 ### Project Description
