@@ -9,7 +9,6 @@ You can clone this repo to modify and make changes of your own. Please give me p
 
 ### :slightly_smiling_face: Built With: 
 This project was built using these technologies.
-
 - `C#`
 - `.Net`
 - `SSMS`
