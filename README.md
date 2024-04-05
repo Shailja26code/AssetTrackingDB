@@ -1,9 +1,9 @@
 # Asset Tracking DB
-Mini project during  Using `C#`, `Entity Framework Core`.
+Mini Project Using `C#` & `Entity Framework Core`.
 
 ## Project Description
-- An asset tracking console app that let's the user manage company assets (laptops and mobile phones)
-- Full CRUD
+- An asset tracking console app that let's the user manage company assets (Like laptops and mobile phones)
+- Full `CRUD`
 - Error handling
 - User-friendly interface
 
