@@ -8,7 +8,7 @@ Mini Project Using `C#` & `Entity Framework Core`.
 - User-friendly interface
 
 ### Content
-- View list w/ options
+- View list w/ options 
 1. View asset list
 2. Add product to list
 3. Update product
