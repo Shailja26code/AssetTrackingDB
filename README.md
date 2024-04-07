@@ -21,6 +21,10 @@ This project was built using these technologies.
 - Error handling
 - User-friendly interface
 
+## 🛠 Installation and Setup Instructions
+1. Installation: `EntityFrameworkCore`
+                 `EntityFrameworkCore.SqlServer`
+                 `EntityFrameworkCore.Tools`
 #### Content of App
 - Choose one option from the six options given below..
 1. View asset list
