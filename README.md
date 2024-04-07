@@ -41,5 +41,6 @@ Give a ⭐ if you like this App!
 <p>
 <img alt="Buymeacoffee" src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" height="40px" width="100px"/>
 </p>
+
 ## Room for improvement
 - A suggestion in the project description was to make it possible to place each product in an office around the world and convert the price/cost to the local currency 
