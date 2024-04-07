@@ -30,21 +30,15 @@ This project was built using these technologies.
 3. Add Migration PM>add-migration AddingAssetTable - `Important`
 4. PM>update-database
 
+## Usage Instructions
 
-#### Content of App
-- Choose one option from the six options given below..
-1. View asset list
-2. Add product to list
-3. Update product
-4. Delete product
-5. View statistics
-6. Exit app
+Open the project folder and go to .sln file.
+You will find all the files and you can edit your information accordingly.
 
-- Statistics:
-1. Total nr of assets
-2. Nr of laptops/mobile phones
-3. Total cost of assets
-4. Cost laptops/mobile phones
+### Show your support
+
+Give a ⭐ if you like this App!
+<img alt="Buymeacoffee" src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" height="40px" width="100px"/>
 
 ## Room for improvement
 - A suggestion in the project description was to make it possible to place each product in an office around the world and convert the price/cost to the local currency 
