@@ -22,7 +22,7 @@ namespace AssetTrackingDB
         {
             MyDbContext Context = new MyDbContext();
 
-            Asset asset = new Asset();
+            Asset1 asset = new Asset1();
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -57,6 +57,33 @@ namespace AssetTrackingDB
 
             asset.Model = model;
 
+            Console.Write(" Office(Sweden/ Denmark/ US or other): ");
+            string Office = Console.ReadLine();
+
+            bool isOfficeEmpty = string.IsNullOrWhiteSpace(Office);
+
+            while (isOfficeEmpty)
+            {
+                message.DisplayErrorMessage(" Please enter Office (Sweden/ Denmark/ US or other): ");
+                Office = Console.ReadLine();
+                isOfficeEmpty = string.IsNullOrWhiteSpace(Office);
+            }
+
+            asset.Office = Office;
+
+            if(Office.ToUpper() == "SWEDEN")
+            {
+                asset.Currency = "SEK";
+            }
+            else if(Office.ToUpper() == "DENMARK")
+            {
+                asset.Currency = "DKK";
+            }
+            else
+            {
+                asset.Currency = "USD";
+            }
+
             Console.Write(" Purchase date (YY-MM-DD): ");
             string date = Console.ReadLine();
 
@@ -86,7 +113,7 @@ namespace AssetTrackingDB
 
             asset.PurchaseDate = purchaseDate;
 
-            Console.Write(" Price: ");
+            Console.Write(" Price (In USD): ");
             string price = Console.ReadLine();
 
             bool isPriceInt = int.TryParse(price, out int priceInt);
@@ -105,7 +132,22 @@ namespace AssetTrackingDB
                 }
             }
 
-            asset.Price = priceInt;
+            if(asset.Currency == "SEK")
+            {
+                int exchange_rate = 10;
+                int local_price = exchange_rate * priceInt;
+                asset.Price = local_price;
+            }
+            else if(asset.Currency == "DKK")
+            {
+                int exchange_rate = 7;
+                int local_price = exchange_rate * priceInt;
+                asset.Price = local_price;
+            }
+            else
+            {
+                asset.Price = priceInt;
+            }
 
             Console.Write(" Is the product a (1) laptop or (2) mobile phone? ");
             string type = (Console.ReadLine());
@@ -172,11 +214,11 @@ namespace AssetTrackingDB
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("{0,-5} {1,-15} {2,-15} {3,-15} {4,-15} {5,-10}", " Id", "Type", "Brand", "Model", "Purchase Date", "Price");
-            Console.WriteLine(new string('-', 75));
+            Console.WriteLine("{0,-5} {1,-15} {2,-15} {3,-15} {4,-15} {5,-15} {6, -10} {7, -10}", " Id", "Type", "Brand", "Model", "Office", "Purchase Date", "Currency", "Price");
+            Console.WriteLine(new string('-', 105));
             Console.ResetColor();
 
-            foreach (Asset asset in sortedAssets)
+            foreach (Asset1 asset in sortedAssets)
             {
                 bool isEndOfLifeNear = IsEndOfLifeNear(asset.PurchaseDate);
                 bool isEndOfLifeAlmostNear = IsEndOfLifeAlmostNear(asset.PurchaseDate);
@@ -191,7 +233,7 @@ namespace AssetTrackingDB
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                 }
 
-                Console.WriteLine("{0,-5} {1,-15} {2,-15} {3,-15} {4,-15} {5,-10}", $" {asset.Id}", asset.Type, asset.Brand, asset.Model, asset.PurchaseDate.ToString("yy/MM/dd"), asset.Price);
+                Console.WriteLine("{0,-5} {1,-15} {2,-15} {3,-15} {4,-15} {5,-15} {6, -10} {7, -10}", $" {asset.Id}", asset.Type, asset.Brand, asset.Model,asset.Office , asset.PurchaseDate.ToString("yy/MM/dd"), asset.Currency, asset.Price);
                 Console.ResetColor();
 
             }
@@ -255,7 +297,7 @@ namespace AssetTrackingDB
                 isEditIdInt = int.TryParse(editId, out editIdInt);
             }
 
-            Asset asset = Context.Assets.FirstOrDefault(x => x.Id.Equals(editIdInt));
+            Asset1 asset = Context.Assets.FirstOrDefault(x => x.Id.Equals(editIdInt));
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -265,8 +307,10 @@ namespace AssetTrackingDB
             Console.WriteLine(" (1) Type");
             Console.WriteLine(" (2) Brand");
             Console.WriteLine(" (3) Model");
-            Console.WriteLine(" (4) Purchase Date");
-            Console.WriteLine(" (5) Price");
+            Console.WriteLine(" (4) Office");
+            Console.WriteLine(" (5) Purchase Date");
+            Console.WriteLine(" (6) Currency");
+            Console.WriteLine(" (7) Price");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Write(" My choice: ");
@@ -290,9 +334,9 @@ namespace AssetTrackingDB
                 }
             }
 
-            while (isEditFieldInt && editFieldInt < 1 || editFieldInt > 5)
+            while (isEditFieldInt && editFieldInt < 1 || editFieldInt > 7)
             {
-                message.DisplayErrorMessage(" You can only choose (1), (2), (3), (4) or (5): ");
+                message.DisplayErrorMessage(" You can only choose between 1 to 7 ");
                 editField = Console.ReadLine();
                 isEditFieldInt = int.TryParse(editField, out editFieldInt);
             }
@@ -362,6 +406,9 @@ namespace AssetTrackingDB
                     asset.Model = newValue;
                     break;
                 case 4:
+                    asset.Office = newValue;
+                    break;
+                case 5:
                     DateTime newValueDate;
                     bool isDate = DateTime.TryParse(newValue, out newValueDate);
 
@@ -388,7 +435,10 @@ namespace AssetTrackingDB
 
                     asset.PurchaseDate = newValueDate;
                     break;
-                case 5:
+                case 6:
+                    asset.Currency = newValue;
+                    break;
+                case 7:
                     try
                     {
                         newValueInt = Convert.ToInt32(newValue);
@@ -416,7 +466,7 @@ namespace AssetTrackingDB
                 message.DisplayErrorMessage(" Was not able to edit product.");
             }
 
-            Asset editedAsset = Context.Assets.FirstOrDefault(x => x.Id.Equals(editIdInt));
+            Asset1 editedAsset = Context.Assets.FirstOrDefault(x => x.Id.Equals(editIdInt));
 
             message.DisplaySuccessMessage($" Product with Id {editIdInt} is edited - {editedAsset.Brand} {editedAsset.Model}.");
         }
@@ -460,7 +510,7 @@ namespace AssetTrackingDB
                 isDeleteIdInt = int.TryParse(deleteId, out deleteIdInt);
             }
 
-            Asset asset = Context.Assets.FirstOrDefault(x => x.Id.Equals(deleteIdInt));
+            Asset1 asset = Context.Assets.FirstOrDefault(x => x.Id.Equals(deleteIdInt));
 
             try
             {

@@ -109,9 +109,7 @@ void ChooseStats()
     Console.WriteLine();
     Console.WriteLine(" (1) Total number of assets");
     Console.WriteLine(" (2) Number of Laptops/Mobile Phones");
-    Console.WriteLine(" (3) Total cost of assets");
-    Console.WriteLine(" (4) Cost Laptops/Mobile Phones");
-    Console.WriteLine(" (5) Back to main page");
+    Console.WriteLine(" (3) Back to main page");
 
     Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -130,15 +128,15 @@ void ChooseStats()
     {
         while (!isOptionInputInt)
         {
-            message.DisplayErrorMessage(" Make a choice - (1), (2), (3), (4) or (5): ");
+            message.DisplayErrorMessage(" Make a choice - (1), (2) or (3): ");
             optionInput = Console.ReadLine();
             isOptionInputInt = int.TryParse(optionInput, out optionInputInt);
         }
     }
 
-    while (isOptionInputInt && optionInputInt < 1 || optionInputInt > 5)
+    while (isOptionInputInt && optionInputInt < 1 || optionInputInt > 3)
     {
-        message.DisplayErrorMessage(" You can only choose (1), (2), (3), (4) or (5): ");
+        message.DisplayErrorMessage(" You can only choose (1), (2) or (3): ");
         optionInput = Console.ReadLine();
         isOptionInputInt = int.TryParse(optionInput, out optionInputInt);
     }
@@ -156,16 +154,6 @@ void ChooseStats()
             ChooseStats();
             break;
         case 3:
-            HandleEmptyList();
-            TotalCost();
-            ChooseStats();
-            break;
-        case 4:
-            HandleEmptyList();
-            SplitCost();
-            ChooseStats();
-            break;
-        case 5:
             RunApp();
             break;
     }
@@ -189,30 +177,6 @@ void SplitAssets()
     Console.WriteLine();
     message.StatisticsMessage($" >> Nr of Laptops: [{laptopCount}]");
     message.StatisticsMessage($" >> Nr of Mobile Phones: [{mobilePhoneCount}]");
-}
-
-//Show total cost
-void TotalCost()
-{
-    MyDbContext Context = new MyDbContext();
-
-    int totalCost = Context.Assets.Sum(x => x.Price);
-
-    Console.WriteLine();
-    message.StatisticsMessage($" >> Total cost: [{totalCost} SEK]");
-}
-
-//Show laptop/mobile phone cost
-void SplitCost()
-{
-    MyDbContext Context = new MyDbContext();
-
-    int laptopCost = Context.Assets.Where(x => x.Type == "Laptop").Sum(x => x.Price);
-    int mobilePhoneCost = Context.Assets.Where(x => x.Type == "MobilePhone").Sum(x => x.Price);
-
-    Console.WriteLine();
-    message.StatisticsMessage($" >> Laptop cost: [{laptopCost} SEK]");
-    message.StatisticsMessage($" >> Mobile Phone cost: [{mobilePhoneCost} SEK]");
 }
 
 //Count assets
@@ -241,7 +205,7 @@ void ExitApp()
 {
     Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine(" >>> GOODBYE! <<<");
+    Console.WriteLine("  GOODBYE! ");
     Console.ResetColor();
     System.Environment.Exit(1);
 }
