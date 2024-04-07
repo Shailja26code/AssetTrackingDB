@@ -43,4 +43,4 @@ Give a ⭐ if you like this App!
 </p>
 
 ## Room for improvement
-- A suggestion in the project description was to make it possible to place each product in an office around the world and convert the price/cost to the local currency 
+- Need to work on Date/Time Part little bit.
