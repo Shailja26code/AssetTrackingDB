@@ -25,6 +25,12 @@ This project was built using these technologies.
 1. Installation: `EntityFrameworkCore`
                  `EntityFrameworkCore.SqlServer`
                  `EntityFrameworkCore.Tools`
+
+2. In Package Manager Control: You can run NuGet Commands...
+3. Add Migration PM>add-migration AddingAssetTable - `Important`
+4. PM>update-database
+
+
 #### Content of App
 - Choose one option from the six options given below..
 1. View asset list
